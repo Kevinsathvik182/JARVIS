@@ -217,17 +217,15 @@ function stopListen(){try{if(recognition){recognition.abort();recognition=null;}
 document.getElementById('txtin').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendText();}});
 initVoices();setupHint();setMode(null);
 setTimeout(()=>{const h=new Date().getHours();speak(h<12?"Good morning, sir. I am ready for whatever the day brings.":h<18?"Good afternoon, sir. Jarvis is at your complete disposal.":"Good evening, sir. What shall we attend to tonight?");},600);
-</script>
-</body>
-</html>
 <div id="globeViz"></div>
 <script>
   const myGlobe = new Globe(document.getElementById('globeViz'))
     .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
     .backgroundColor('#000000');
 </script>
-<style>
-  body { margin: 0; padding: 0; overflow: hidden; }
-  #globeViz { width: 100vw; height: 100vh; }
-</style>
-
+      <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        #globeViz { width: 100vw; height: 100vh; }
+    </style>
+</body>
+</html>
