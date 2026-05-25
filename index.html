@@ -220,3 +220,13 @@ setTimeout(()=>{const h=new Date().getHours();speak(h<12?"Good morning, sir. I a
 </script>
 </body>
 </html>
+<div id="globeViz"></div>
+<script>
+  const myGlobe = new Globe(document.getElementById('globeViz'))
+    .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
+    .backgroundColor('#000000');
+</script>
+<style>
+  body { margin: 0; padding: 0; overflow: hidden; }
+  #globeViz { width: 100vw; height: 100vh; }
+</style>
